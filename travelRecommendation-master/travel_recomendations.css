@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+nav {
+    background-color: #2f3437;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h2 {
+    color: white;
+    font-style: italic;
+}
+
+/* Navigation Links */
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-family: Georgia, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #6fd3d9;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 30px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 250px;
+    font-size: 16px;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    background: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: teal;
+}
+
+.search-container input[type="text"]::placeholder {
+    color: teal;
+}
+
+/* Intro*/
+.intro {
+    padding: 70px 10% 40px;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+}
+
+.intro-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4.5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.25rem;
+}
+
+.intro-subtitle {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.65;
+    max-width: 60ch;
+    margin-bottom: 2rem;
+}
+
+.btn-book {
+    padding: 0.75rem 2rem;
+    background: teal;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-transform: uppercase;
+}
+
+.btn-book:hover {
+    background: #006666;
+    transform: translateY(-2px);
+}
+
+/* About Us page part*/
+.team-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    padding: 40px 10% 100px;
+    align-items: start;
+}
+
+.team-title {
+    display: flex;
+    align-items: flex-start;
+}
+
+.team-title h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Card */
+.member {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(2px);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232f3437'%3E%3Cpath d='M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2.5c-3.3 0-9.8 1.6-9.8 4.9v2.4h19.6v-2.4c0-3.3-6.5-4.9-9.8-4.9z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 42px 42px;
+    flex-shrink: 0;
+}
+
+.member h3 {
+    margin: 10px 0;
+}
+
+.member p {
+    font-size: 14px;
+    opacity: 0.9;
+    flex-grow: 1;
+}
+
+.member span {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 12px;
+    background: #2f6fa3;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+/* Social media */
+.social-sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(0, 0, 0, 0.45);
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.social-link svg {
+    width: 18px;
+    height: 18px;
+}
+
+.social-link:hover {
+    background: #4caf85;
+    transform: translateX(4px);
+}
+
+/* part for the narrow screen*/
+@media (max-width: 900px) {
+    .team-content {
+        grid-template-columns: 1fr;
+    }
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+    .intro {
+        max-width: 85%;
+    }
+}
+
+/* Contact page part */
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 10%;
+    min-height: calc(100vh - 78px);
+}
+
+.contact-intro {
+    flex: 1 1 320px;
+    color: white;
+}
+
+.contact-intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 1rem;
+}
+
+.contact-intro p {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-form-card {
+    flex: 0 1 420px;
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: teal;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn-submit:hover {
+    background: #006666;
+}
+
+@media (max-width: 700px) {
+    .contact-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 8% 60px;
+    }
+    .contact-form-card {
+        max-width: 100%;
+    }
+}
+
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.result-card {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    justify-content: center;
+}
+
+.result-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.result-card h2 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.result-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: white;
+}
